@@ -1,0 +1,1102 @@
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7f226aefee10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- longjobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7f9acb925e90
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- async@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7f03c0a17e10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7f88097ded10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- longjobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7f460534fd90
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- async@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7f8e1ea95d10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7fe6a73aed10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- longjobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7feabcef9d90
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- async@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7fb4fa163d10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7f2477c2cd10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- longjobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7fbab1a5cd90
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- async@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7fea785d7d10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7fd1ad061d10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- longjobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7fb265b40d90
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- async@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7f34e4831d10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7fc881bfed10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7f4b78339d10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7f5bbb5d4d10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7fef6299dd10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7f3b4178ad10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7f639de8cd10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7f7b17462d10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7f1d68078d10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7f6ffb56dd10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7fc5000f1d10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7fb610138d10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7f35b1081d10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7fd715aedd10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7f4052d1fd10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7f15dba05d10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7fef19b9ed10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7fd165a12d10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7ff0a7e81d10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- longjobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7fe0950e8d90
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- async@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7fb80a413d10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- jobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7fd63b524d10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- longjobs@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7f4de7798d90
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+
+ 
+ -------------- async@training-server v3.1.23 (Cipater)
+---- **** ----- 
+--- * ***  * -- Linux-3.13.0-79-generic-x86_64-with-Ubuntu-14.04-trusty
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         frappe:0x7f3f3f682d10
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- 
+--- ***** ----- [queues]
+ -------------- .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . erpnext.tasks.send_newsletter
+  . frappe.FrappeTask
+  . frappe.celery_app.FrappeTask
+  . frappe.celery_app.test
+  . frappe.tasks.enqueue_events_for_site
+  . frappe.tasks.enqueue_scheduler_events
+  . frappe.tasks.pull_from_email_account
+  . frappe.tasks.run_async_task
+  . frappe.tasks.scheduler_task
+  . frappe.tasks.sendmail
+  . frappe.tasks.sync_queues
+  . frappe.test
+

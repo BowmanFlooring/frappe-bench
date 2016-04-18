@@ -1,0 +1,1532 @@
+[2016-03-21 11:52:05 +0000] [5043] [INFO] Starting gunicorn 19.4.5
+[2016-03-21 11:52:05 +0000] [5043] [INFO] Listening at: http://127.0.0.1:8000 (5043)
+[2016-03-21 11:52:05 +0000] [5043] [INFO] Using worker: sync
+[2016-03-21 11:52:05 +0000] [5070] [INFO] Booting worker with pid: 5070
+[2016-03-21 11:52:05 +0000] [5071] [INFO] Booting worker with pid: 5071
+[2016-03-21 12:35:24 +0000] [5043] [INFO] Handling signal: term
+[2016-03-21 12:35:24 +0000] [5043] [INFO] Shutting down: Master
+[2016-03-21 12:35:44 +0000] [1522] [INFO] Starting gunicorn 19.4.5
+[2016-03-21 12:35:44 +0000] [1522] [INFO] Listening at: http://127.0.0.1:8000 (1522)
+[2016-03-21 12:35:44 +0000] [1522] [INFO] Using worker: sync
+[2016-03-21 12:35:44 +0000] [1538] [INFO] Booting worker with pid: 1538
+[2016-03-21 12:35:44 +0000] [1539] [INFO] Booting worker with pid: 1539
+[2016-03-24 11:45:58 +0000] [1522] [INFO] Handling signal: term
+[2016-03-24 11:45:59 +0000] [1522] [INFO] Shutting down: Master
+[2016-03-24 11:46:20 +0000] [1525] [INFO] Starting gunicorn 19.4.5
+[2016-03-24 11:46:20 +0000] [1525] [INFO] Listening at: http://127.0.0.1:8000 (1525)
+[2016-03-24 11:46:20 +0000] [1525] [INFO] Using worker: sync
+[2016-03-24 11:46:20 +0000] [1542] [INFO] Booting worker with pid: 1542
+[2016-03-24 11:46:20 +0000] [1543] [INFO] Booting worker with pid: 1543
+[2016-03-28 15:00:13 +0000] [1525] [INFO] Handling signal: term
+[2016-03-28 15:00:13 +0000] [1525] [INFO] Shutting down: Master
+[2016-03-28 15:04:23 +0000] [1530] [INFO] Starting gunicorn 19.4.5
+[2016-03-28 15:04:23 +0000] [1530] [INFO] Listening at: http://127.0.0.1:8000 (1530)
+[2016-03-28 15:04:23 +0000] [1530] [INFO] Using worker: sync
+[2016-03-28 15:04:23 +0000] [1547] [INFO] Booting worker with pid: 1547
+[2016-03-28 15:04:23 +0000] [1548] [INFO] Booting worker with pid: 1548
+
+2016-03-30 18:39:03,605 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-03 10:51:54,548 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+[2016-04-04 13:06:24 +0000] [1530] [INFO] Handling signal: term
+[2016-04-04 13:06:24 +0000] [1530] [INFO] Shutting down: Master
+[2016-04-04 13:06:46 +0000] [1525] [INFO] Starting gunicorn 19.4.5
+[2016-04-04 13:06:46 +0000] [1525] [INFO] Listening at: http://127.0.0.1:8000 (1525)
+[2016-04-04 13:06:46 +0000] [1525] [INFO] Using worker: sync
+[2016-04-04 13:06:47 +0000] [1542] [INFO] Booting worker with pid: 1542
+[2016-04-04 13:06:47 +0000] [1543] [INFO] Booting worker with pid: 1543
+
+2016-04-04 13:07:34,847 Request Error 
+ site: site1.local
+ form: {'cmd': u'frappe.desk.form.load.getdoctype',
+ 'doctype': u'Lead',
+ 'with_parent': u'1'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 64, in getdoctype
+    docs = get_meta_bundle(doctype)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 74, in get_meta_bundle
+    bundle = [frappe.desk.form.meta.get_meta(doctype)]
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 20, in get_meta
+    meta = frappe.cache().hget("form_meta", doctype, lambda: FormMeta(doctype))
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 145, in hget
+    value = generator()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 20, in <lambda>
+    meta = frappe.cache().hget("form_meta", doctype, lambda: FormMeta(doctype))
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 32, in __init__
+    self.load_assets()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 42, in load_assets
+    self.load_templates()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 146, in load_templates
+    module = load_doctype_module(self.name)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/modules/__init__.py", line 64, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(get_module_name(doctype, module, prefix))
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 598, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/crm/doctype/lead/lead.py", line 138
+    local_branch = frappe.db.get_value("Lead",source_name,"branch")
+    ^
+ IndentationError: unexpected indent
+
+--------------
+
+2016-04-04 13:07:34,908 New Exception collected with id: 2016-04-04 13:07:34.849643-106.51.227.205-c3f 
+ site: site1.local
+ form: {'cmd': u'frappe.desk.form.load.getdoctype',
+ 'doctype': u'Lead',
+ 'with_parent': u'1'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 64, in getdoctype
+    docs = get_meta_bundle(doctype)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 74, in get_meta_bundle
+    bundle = [frappe.desk.form.meta.get_meta(doctype)]
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 20, in get_meta
+    meta = frappe.cache().hget("form_meta", doctype, lambda: FormMeta(doctype))
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 145, in hget
+    value = generator()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 20, in <lambda>
+    meta = frappe.cache().hget("form_meta", doctype, lambda: FormMeta(doctype))
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 32, in __init__
+    self.load_assets()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 42, in load_assets
+    self.load_templates()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 146, in load_templates
+    module = load_doctype_module(self.name)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/modules/__init__.py", line 64, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(get_module_name(doctype, module, prefix))
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 598, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/crm/doctype/lead/lead.py", line 138
+    local_branch = frappe.db.get_value("Lead",source_name,"branch")
+    ^
+ IndentationError: unexpected indent
+
+--------------
+[2016-04-04 13:12:59 +0000] [1525] [INFO] Handling signal: term
+[2016-04-04 13:12:59 +0000] [1525] [INFO] Shutting down: Master
+[2016-04-04 13:13:17 +0000] [1525] [INFO] Starting gunicorn 19.4.5
+[2016-04-04 13:13:17 +0000] [1525] [INFO] Listening at: http://127.0.0.1:8000 (1525)
+[2016-04-04 13:13:17 +0000] [1525] [INFO] Using worker: sync
+[2016-04-04 13:13:17 +0000] [1544] [INFO] Booting worker with pid: 1544
+[2016-04-04 13:13:17 +0000] [1545] [INFO] Booting worker with pid: 1545
+[2016-04-04 13:22:19 +0000] [1525] [INFO] Handling signal: term
+[2016-04-04 13:22:19 +0000] [1525] [INFO] Shutting down: Master
+[2016-04-04 13:22:23 +0000] [1881] [INFO] Starting gunicorn 19.4.5
+[2016-04-04 13:22:23 +0000] [1881] [INFO] Listening at: http://127.0.0.1:8000 (1881)
+[2016-04-04 13:22:23 +0000] [1881] [INFO] Using worker: sync
+[2016-04-04 13:22:23 +0000] [1887] [INFO] Booting worker with pid: 1887
+[2016-04-04 13:22:23 +0000] [1888] [INFO] Booting worker with pid: 1888
+[2016-04-05 14:50:18 +0000] [1881] [INFO] Handling signal: term
+[2016-04-05 14:50:19 +0000] [1881] [INFO] Shutting down: Master
+[2016-04-05 14:50:22 +0000] [12974] [INFO] Starting gunicorn 19.4.5
+[2016-04-05 14:50:22 +0000] [12974] [INFO] Listening at: http://127.0.0.1:8000 (12974)
+[2016-04-05 14:50:22 +0000] [12974] [INFO] Using worker: sync
+[2016-04-05 14:50:23 +0000] [12980] [INFO] Booting worker with pid: 12980
+[2016-04-05 14:50:23 +0000] [12981] [INFO] Booting worker with pid: 12981
+
+2016-04-05 14:50:38,264 Request Error 
+ site: site1.local
+ form: {'cmd': u'frappe.desk.form.load.getdoc',
+ 'doctype': u'Lead',
+ 'name': u'LEAD/HAV/00006'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 32, in getdoc
+    doc = frappe.get_doc(doctype, name)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 533, in get_doc
+    return frappe.model.document.get_doc(arg1, arg2)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/model/document.py", line 44, in get_doc
+    controller = get_controller(doctype)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/model/base_document.py", line 30, in get_controller
+    module = load_doctype_module(doctype, module_name)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/modules/__init__.py", line 64, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(get_module_name(doctype, module, prefix))
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 598, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/crm/doctype/lead/lead.py", line 107
+    local_branch = frappe.db.get_value("Lead",source_name,"branch")
+    ^
+ IndentationError: unexpected indent
+
+--------------
+
+2016-04-05 14:50:38,371 New Exception collected with id: 2016-04-05 14:50:38.266598-106.51.227.205-784 
+ site: site1.local
+ form: {'cmd': u'frappe.desk.form.load.getdoc',
+ 'doctype': u'Lead',
+ 'name': u'LEAD/HAV/00006'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 32, in getdoc
+    doc = frappe.get_doc(doctype, name)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 533, in get_doc
+    return frappe.model.document.get_doc(arg1, arg2)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/model/document.py", line 44, in get_doc
+    controller = get_controller(doctype)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/model/base_document.py", line 30, in get_controller
+    module = load_doctype_module(doctype, module_name)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/modules/__init__.py", line 64, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(get_module_name(doctype, module, prefix))
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 598, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/crm/doctype/lead/lead.py", line 107
+    local_branch = frappe.db.get_value("Lead",source_name,"branch")
+    ^
+ IndentationError: unexpected indent
+
+--------------
+[2016-04-05 14:52:54 +0000] [12974] [INFO] Handling signal: term
+[2016-04-05 14:52:54 +0000] [12974] [INFO] Shutting down: Master
+[2016-04-05 14:52:58 +0000] [13122] [INFO] Starting gunicorn 19.4.5
+[2016-04-05 14:52:58 +0000] [13122] [INFO] Listening at: http://127.0.0.1:8000 (13122)
+[2016-04-05 14:52:58 +0000] [13122] [INFO] Using worker: sync
+[2016-04-05 14:52:58 +0000] [13128] [INFO] Booting worker with pid: 13128
+[2016-04-05 14:52:58 +0000] [13129] [INFO] Booting worker with pid: 13129
+
+2016-04-05 14:53:20,865 Request Error 
+ site: site1.local
+ form: {'cmd': u'erpnext.crm.doctype.lead.lead.make_customer',
+ 'source_name': u'LEAD/HAV/00006'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/crm/doctype/lead/lead.py", line 82, in make_customer
+    return _make_customer(source_name, target_doc)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/crm/doctype/lead/lead.py", line 109, in _make_customer
+    target_doc.naming_series = frappe.db.get_value("Branch",local_branch,"customer_naming_series")
+ AttributeError: 'NoneType' object has no attribute 'naming_series'
+
+--------------
+
+2016-04-05 14:53:20,970 New Exception collected with id: 2016-04-05 14:53:20.867581-106.51.227.205-7b4 
+ site: site1.local
+ form: {'cmd': u'erpnext.crm.doctype.lead.lead.make_customer',
+ 'source_name': u'LEAD/HAV/00006'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/crm/doctype/lead/lead.py", line 82, in make_customer
+    return _make_customer(source_name, target_doc)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/crm/doctype/lead/lead.py", line 109, in _make_customer
+    target_doc.naming_series = frappe.db.get_value("Branch",local_branch,"customer_naming_series")
+ AttributeError: 'NoneType' object has no attribute 'naming_series'
+
+--------------
+
+2016-04-05 14:55:38,848 Request Error 
+ site: site1.local
+ form: {'cmd': u'erpnext.crm.doctype.lead.lead.make_customer',
+ 'source_name': u'LEAD/HAV/00006'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/crm/doctype/lead/lead.py", line 82, in make_customer
+    return _make_customer(source_name, target_doc)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/crm/doctype/lead/lead.py", line 109, in _make_customer
+    target_doc.naming_series = frappe.db.get_value("Branch",local_branch,"customer_naming_series")
+ AttributeError: 'NoneType' object has no attribute 'naming_series'
+
+--------------
+
+2016-04-05 14:55:38,855 New Exception collected with id: 2016-04-05 14:55:38.850259-106.51.227.205-fca 
+ site: site1.local
+ form: {'cmd': u'erpnext.crm.doctype.lead.lead.make_customer',
+ 'source_name': u'LEAD/HAV/00006'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/crm/doctype/lead/lead.py", line 82, in make_customer
+    return _make_customer(source_name, target_doc)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/crm/doctype/lead/lead.py", line 109, in _make_customer
+    target_doc.naming_series = frappe.db.get_value("Branch",local_branch,"customer_naming_series")
+ AttributeError: 'NoneType' object has no attribute 'naming_series'
+
+--------------
+[2016-04-05 14:59:37 +0000] [13122] [INFO] Handling signal: term
+[2016-04-05 14:59:37 +0000] [13122] [INFO] Shutting down: Master
+[2016-04-05 14:59:41 +0000] [13318] [INFO] Starting gunicorn 19.4.5
+[2016-04-05 14:59:41 +0000] [13318] [INFO] Listening at: http://127.0.0.1:8000 (13318)
+[2016-04-05 14:59:41 +0000] [13318] [INFO] Using worker: sync
+[2016-04-05 14:59:41 +0000] [13323] [INFO] Booting worker with pid: 13323
+[2016-04-05 14:59:42 +0000] [13324] [INFO] Booting worker with pid: 13324
+
+2016-04-05 15:00:06,365 Request Error 
+ site: site1.local
+ form: {'cmd': u'erpnext.crm.doctype.lead.lead.make_customer',
+ 'source_name': u'LEAD/HAV/00006'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/crm/doctype/lead/lead.py", line 82, in make_customer
+    return _make_customer(source_name, target_doc)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/crm/doctype/lead/lead.py", line 109, in _make_customer
+    }}, target_doc, set_missing_values, ignore_permissions=ignore_permissions)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/model/mapper.py", line 71, in get_mapped_doc
+    postprocess(source_doc, target_doc)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/crm/doctype/lead/lead.py", line 97, in set_missing_values
+    target_doc.naming_series = frappe.db.get_value("Branch",local_branch,"customer_naming_series")
+ AttributeError: 'NoneType' object has no attribute 'naming_series'
+
+--------------
+
+2016-04-05 15:00:06,421 New Exception collected with id: 2016-04-05 15:00:06.366272-106.51.227.205-32a 
+ site: site1.local
+ form: {'cmd': u'erpnext.crm.doctype.lead.lead.make_customer',
+ 'source_name': u'LEAD/HAV/00006'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/crm/doctype/lead/lead.py", line 82, in make_customer
+    return _make_customer(source_name, target_doc)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/crm/doctype/lead/lead.py", line 109, in _make_customer
+    }}, target_doc, set_missing_values, ignore_permissions=ignore_permissions)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/model/mapper.py", line 71, in get_mapped_doc
+    postprocess(source_doc, target_doc)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/crm/doctype/lead/lead.py", line 97, in set_missing_values
+    target_doc.naming_series = frappe.db.get_value("Branch",local_branch,"customer_naming_series")
+ AttributeError: 'NoneType' object has no attribute 'naming_series'
+
+--------------
+[2016-04-05 15:01:25 +0000] [13318] [INFO] Handling signal: term
+[2016-04-05 15:01:25 +0000] [13318] [INFO] Shutting down: Master
+[2016-04-05 15:01:29 +0000] [13354] [INFO] Starting gunicorn 19.4.5
+[2016-04-05 15:01:29 +0000] [13354] [INFO] Listening at: http://127.0.0.1:8000 (13354)
+[2016-04-05 15:01:29 +0000] [13354] [INFO] Using worker: sync
+[2016-04-05 15:01:29 +0000] [13363] [INFO] Booting worker with pid: 13363
+[2016-04-05 15:01:29 +0000] [13364] [INFO] Booting worker with pid: 13364
+
+2016-04-05 23:46:11,730 Request Error 
+ site: site1.local
+ form: {'redirect:${#res=#context.get(\'com.opensymphony.xwork2.dispatcher.HttpServletResponse\'),#res.setCharacterEncoding("UTF-8"),#req=#context.get(\'com.opensymphony.xwork2.dispatcher.HttpServletRequest\'),#res.getWriter().print("dir:"),#res.getWriter().println(#req.getSession().getServletContext().getRealPath("/")),#res.getWriter().flush(),#res.getWriter().close()}': u''}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+[2016-04-06 10:34:46 +0000] [13354] [INFO] Handling signal: term
+[2016-04-06 10:34:47 +0000] [13354] [INFO] Shutting down: Master
+[2016-04-06 10:34:50 +0000] [20089] [INFO] Starting gunicorn 19.4.5
+[2016-04-06 10:34:50 +0000] [20089] [INFO] Listening at: http://127.0.0.1:8000 (20089)
+[2016-04-06 10:34:50 +0000] [20089] [INFO] Using worker: sync
+[2016-04-06 10:34:50 +0000] [20095] [INFO] Booting worker with pid: 20095
+[2016-04-06 10:34:51 +0000] [20096] [INFO] Booting worker with pid: 20096
+
+2016-04-06 10:35:12,816 Request Error 
+ site: site1.local
+ form: {'cmd': u'frappe.desk.form.load.getdoc',
+ 'doctype': u'Quotation',
+ 'name': u'QTN/HAV/15-16/00005'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 32, in getdoc
+    doc = frappe.get_doc(doctype, name)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 533, in get_doc
+    return frappe.model.document.get_doc(arg1, arg2)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/model/document.py", line 44, in get_doc
+    controller = get_controller(doctype)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/model/base_document.py", line 30, in get_controller
+    module = load_doctype_module(doctype, module_name)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/modules/__init__.py", line 64, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(get_module_name(doctype, module, prefix))
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 598, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/selling/doctype/quotation/quotation.py", line 104
+    doclist = get_mapped_doc("Quotation", source_name, {
+    ^
+ IndentationError: unexpected indent
+
+--------------
+
+2016-04-06 10:35:12,922 New Exception collected with id: 2016-04-06 10:35:12.818369-106.51.227.205-214 
+ site: site1.local
+ form: {'cmd': u'frappe.desk.form.load.getdoc',
+ 'doctype': u'Quotation',
+ 'name': u'QTN/HAV/15-16/00005'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 32, in getdoc
+    doc = frappe.get_doc(doctype, name)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 533, in get_doc
+    return frappe.model.document.get_doc(arg1, arg2)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/model/document.py", line 44, in get_doc
+    controller = get_controller(doctype)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/model/base_document.py", line 30, in get_controller
+    module = load_doctype_module(doctype, module_name)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/modules/__init__.py", line 64, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(get_module_name(doctype, module, prefix))
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 598, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/selling/doctype/quotation/quotation.py", line 104
+    doclist = get_mapped_doc("Quotation", source_name, {
+    ^
+ IndentationError: unexpected indent
+
+--------------
+
+2016-04-06 10:35:48,912 Request Error 
+ site: site1.local
+ form: {'cmd': u'erpnext.selling.doctype.quotation.quotation.make_sales_order',
+ 'source_name': u'QTN/HAV/15-16/00005'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 30, in execute_cmd
+    method = get_attr(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 114, in get_attr
+    method = frappe.get_attr(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 788, in get_attr
+    return getattr(get_module(modulename), methodname)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 598, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/selling/doctype/quotation/quotation.py", line 104
+    doclist = get_mapped_doc("Quotation", source_name, {
+    ^
+ IndentationError: unexpected indent
+
+--------------
+
+2016-04-06 10:35:48,916 New Exception collected with id: 2016-04-06 10:35:48.913362-106.51.227.205-f6b 
+ site: site1.local
+ form: {'cmd': u'erpnext.selling.doctype.quotation.quotation.make_sales_order',
+ 'source_name': u'QTN/HAV/15-16/00005'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 30, in execute_cmd
+    method = get_attr(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 114, in get_attr
+    method = frappe.get_attr(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 788, in get_attr
+    return getattr(get_module(modulename), methodname)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 598, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/selling/doctype/quotation/quotation.py", line 104
+    doclist = get_mapped_doc("Quotation", source_name, {
+    ^
+ IndentationError: unexpected indent
+
+--------------
+[2016-04-06 10:38:45 +0000] [20089] [INFO] Handling signal: term
+[2016-04-06 10:38:45 +0000] [20089] [INFO] Shutting down: Master
+[2016-04-06 10:38:49 +0000] [20231] [INFO] Starting gunicorn 19.4.5
+[2016-04-06 10:38:49 +0000] [20231] [INFO] Listening at: http://127.0.0.1:8000 (20231)
+[2016-04-06 10:38:49 +0000] [20231] [INFO] Using worker: sync
+[2016-04-06 10:38:49 +0000] [20237] [INFO] Booting worker with pid: 20237
+[2016-04-06 10:38:49 +0000] [20238] [INFO] Booting worker with pid: 20238
+
+2016-04-06 10:39:09,336 Request Error 
+ site: site1.local
+ form: {'cmd': u'erpnext.selling.doctype.quotation.quotation.make_sales_order',
+ 'source_name': u'QTN/HAV/15-16/00005'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/selling/doctype/quotation/quotation.py", line 85, in make_sales_order
+    return _make_sales_order(source_name, target_doc)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/selling/doctype/quotation/quotation.py", line 101, in _make_sales_order
+    target.naming_series = frappe.db.get_value("Branch",local_branch,"sales_order_naming_series")
+ NameError: global name 'target' is not defined
+
+--------------
+
+2016-04-06 10:39:09,394 New Exception collected with id: 2016-04-06 10:39:09.338514-106.51.227.205-011 
+ site: site1.local
+ form: {'cmd': u'erpnext.selling.doctype.quotation.quotation.make_sales_order',
+ 'source_name': u'QTN/HAV/15-16/00005'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/selling/doctype/quotation/quotation.py", line 85, in make_sales_order
+    return _make_sales_order(source_name, target_doc)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/selling/doctype/quotation/quotation.py", line 101, in _make_sales_order
+    target.naming_series = frappe.db.get_value("Branch",local_branch,"sales_order_naming_series")
+ NameError: global name 'target' is not defined
+
+--------------
+[2016-04-06 10:41:21 +0000] [20231] [INFO] Handling signal: term
+[2016-04-06 10:41:21 +0000] [20231] [INFO] Shutting down: Master
+[2016-04-06 10:41:25 +0000] [20313] [INFO] Starting gunicorn 19.4.5
+[2016-04-06 10:41:25 +0000] [20313] [INFO] Listening at: http://127.0.0.1:8000 (20313)
+[2016-04-06 10:41:25 +0000] [20313] [INFO] Using worker: sync
+[2016-04-06 10:41:25 +0000] [20322] [INFO] Booting worker with pid: 20322
+[2016-04-06 10:41:25 +0000] [20323] [INFO] Booting worker with pid: 20323
+
+2016-04-06 10:43:16,488 Request Error 
+ site: site1.local
+ form: {'cmd': u'erpnext.selling.doctype.sales_order.sales_order.make_delivery_note',
+ 'source_name': u'SO/HAV/15-16/00001'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/selling/doctype/sales_order/sales_order.py", line 389, in make_delivery_note
+    target.naming_series = frappe.db.get_value("Branch",local_branch,"delivery_note_naming_series")
+ NameError: global name 'target' is not defined
+
+--------------
+
+2016-04-06 10:43:16,552 New Exception collected with id: 2016-04-06 10:43:16.489399-106.51.227.205-c66 
+ site: site1.local
+ form: {'cmd': u'erpnext.selling.doctype.sales_order.sales_order.make_delivery_note',
+ 'source_name': u'SO/HAV/15-16/00001'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/selling/doctype/sales_order/sales_order.py", line 389, in make_delivery_note
+    target.naming_series = frappe.db.get_value("Branch",local_branch,"delivery_note_naming_series")
+ NameError: global name 'target' is not defined
+
+--------------
+
+2016-04-06 10:55:41,861 Request Error 
+ site: site1.local
+ form: {'cmd': u'erpnext.selling.doctype.sales_order.sales_order.make_material_request',
+ 'source_name': u'SO/HAV/15-16/00001'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/selling/doctype/sales_order/sales_order.py", line 346, in make_material_request
+    doc.naming_series = frappe.db.get_value("Branch",local_branch,"material_request_naming_series")
+ UnboundLocalError: local variable 'doc' referenced before assignment
+
+--------------
+
+2016-04-06 10:55:41,926 New Exception collected with id: 2016-04-06 10:55:41.862512-106.51.227.205-b1c 
+ site: site1.local
+ form: {'cmd': u'erpnext.selling.doctype.sales_order.sales_order.make_material_request',
+ 'source_name': u'SO/HAV/15-16/00001'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/selling/doctype/sales_order/sales_order.py", line 346, in make_material_request
+    doc.naming_series = frappe.db.get_value("Branch",local_branch,"material_request_naming_series")
+ UnboundLocalError: local variable 'doc' referenced before assignment
+
+--------------
+
+2016-04-06 10:56:40,715 Request Error 
+ site: site1.local
+ form: {'cmd': u'erpnext.selling.doctype.sales_order.sales_order.make_sales_invoice',
+ 'source_name': u'SO/HAV/15-16/00001'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/selling/doctype/sales_order/sales_order.py", line 442, in make_sales_invoice
+    target.naming_series = frappe.db.get_value("Branch",local_branch,"sales_invoice_naming_series")
+ NameError: global name 'target' is not defined
+
+--------------
+
+2016-04-06 10:56:40,720 New Exception collected with id: 2016-04-06 10:56:40.717176-106.51.227.205-8ee 
+ site: site1.local
+ form: {'cmd': u'erpnext.selling.doctype.sales_order.sales_order.make_sales_invoice',
+ 'source_name': u'SO/HAV/15-16/00001'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/selling/doctype/sales_order/sales_order.py", line 442, in make_sales_invoice
+    target.naming_series = frappe.db.get_value("Branch",local_branch,"sales_invoice_naming_series")
+ NameError: global name 'target' is not defined
+
+--------------
+
+2016-04-06 11:04:38,270 Request Error 
+ site: site1.local
+ form: {'cmd': u'erpnext.selling.doctype.sales_order.sales_order.make_material_request',
+ 'source_name': u'SO/HAV/15-16/00001'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/selling/doctype/sales_order/sales_order.py", line 346, in make_material_request
+    doc.naming_series = frappe.db.get_value("Branch",local_branch,"material_request_naming_series")
+ UnboundLocalError: local variable 'doc' referenced before assignment
+
+--------------
+
+2016-04-06 11:04:38,274 New Exception collected with id: 2016-04-06 11:04:38.271479-106.51.227.205-d3e 
+ site: site1.local
+ form: {'cmd': u'erpnext.selling.doctype.sales_order.sales_order.make_material_request',
+ 'source_name': u'SO/HAV/15-16/00001'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/selling/doctype/sales_order/sales_order.py", line 346, in make_material_request
+    doc.naming_series = frappe.db.get_value("Branch",local_branch,"material_request_naming_series")
+ UnboundLocalError: local variable 'doc' referenced before assignment
+
+--------------
+[2016-04-06 11:10:25 +0000] [20313] [INFO] Handling signal: term
+[2016-04-06 11:10:26 +0000] [20313] [INFO] Shutting down: Master
+[2016-04-06 11:10:29 +0000] [20645] [INFO] Starting gunicorn 19.4.5
+[2016-04-06 11:10:29 +0000] [20645] [INFO] Listening at: http://127.0.0.1:8000 (20645)
+[2016-04-06 11:10:29 +0000] [20645] [INFO] Using worker: sync
+[2016-04-06 11:10:29 +0000] [20650] [INFO] Booting worker with pid: 20650
+[2016-04-06 11:10:29 +0000] [20651] [INFO] Booting worker with pid: 20651
+
+2016-04-06 15:04:02,531 Request Error 
+ site: site1.local
+ form: {'cmd': u'frappe.desk.query_report.run',
+ 'filters': u'{}',
+ 'report_name': u'Stock Ledger'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/desk/query_report.py", line 88, in run
+    columns, result = frappe.get_attr(method_name)(frappe._dict(filters))
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/stock/report/stock_ledger/stock_ledger.py", line 10, in execute
+    sl_entries = get_stock_ledger_entries(filters)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/stock/report/stock_ledger/stock_ledger.py", line 49, in get_stock_ledger_entries
+    .format(sle_conditions=get_sle_conditions(filters)), filters, as_dict=1)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/database.py", line 136, in sql
+    self._cursor.execute(query, values)
+  File "/home/basawaraj/frappe-bench/env/local/lib/python2.7/site-packages/MySQLdb/cursors.py", line 185, in execute
+    for key, item in args.iteritems())
+ KeyError: 'company'
+
+--------------
+
+2016-04-06 15:04:02,620 New Exception collected with id: 2016-04-06 15:04:02.533625-106.51.227.205-df4 
+ site: site1.local
+ form: {'cmd': u'frappe.desk.query_report.run',
+ 'filters': u'{}',
+ 'report_name': u'Stock Ledger'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/desk/query_report.py", line 88, in run
+    columns, result = frappe.get_attr(method_name)(frappe._dict(filters))
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/stock/report/stock_ledger/stock_ledger.py", line 10, in execute
+    sl_entries = get_stock_ledger_entries(filters)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/stock/report/stock_ledger/stock_ledger.py", line 49, in get_stock_ledger_entries
+    .format(sle_conditions=get_sle_conditions(filters)), filters, as_dict=1)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/database.py", line 136, in sql
+    self._cursor.execute(query, values)
+  File "/home/basawaraj/frappe-bench/env/local/lib/python2.7/site-packages/MySQLdb/cursors.py", line 185, in execute
+    for key, item in args.iteritems())
+ KeyError: 'company'
+
+--------------
+
+2016-04-06 20:16:51,770 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-07 00:44:09,709 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-07 00:44:12,077 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-07 10:18:20,478 Request Error 
+ site: site1.local
+ form: {'cmd': u'frappe.desk.moduleview.get'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+ TypeError: get() takes exactly 1 argument (0 given)
+
+--------------
+
+2016-04-07 10:18:20,635 New Exception collected with id: 2016-04-07 10:18:20.480312-106.51.227.205-fde 
+ site: site1.local
+ form: {'cmd': u'frappe.desk.moduleview.get'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+ TypeError: get() takes exactly 1 argument (0 given)
+
+--------------
+
+2016-04-07 14:50:00,236 Request Error 
+ site: site1.local
+ form: {'cmd': u'frappe.templates.pages.print.get_html_and_style',
+ 'doc': u'{"additional_discount_percentage":0,"base_in_words":"INR Sixteen Thousand, Five Hundred And Fifty only.","naming_series":"QTN/HAV/15-16/","creation":"2016-04-05 11:13:51.498315","doctype":"Quotation","currency":"INR","conversion_rate":1,"owner":"haveri@selco-india.com","total":15687,"customer_name":"Nikhil","taxes_and_charges":"Output VAT 5.5% Karnataka","modified_by":"haveri@selco-india.com","order_type":"Sales","lead":"LEAD/HAV/00005","title":"Nikhil","base_total":15687,"selling_price_list":"Branch Sales","transaction_date":"2016-04-05","contact_display":"Nikhil","branch":"Haveri","docstatus":1,"company":"SELCO Solar Light Private Limited","ignore_pricing_rule":0,"base_rounded_total":16550,"quotation_to":"Lead","total_taxes_and_charges":862.79,"grand_total":16549.79,"base_discount_amount":0,"base_total_taxes_and_charges":862.79,"items":[{"base_price_list_rate":15687,"image":"","creation":"2016-04-05 11:13:51.498315","base_amount":15687,"qty":1,"item_tax_rate":"{}","rate":15687,"owner":"haveri@selco-india.com","actual_qty":0,"base_net_amount":15687,"page_break":0,"modified_by":"haveri@selco-india.com","base_net_rate":15687,"discount_percentage":0,"item_name":"125 LPD ETC SWHS","amount":15687,"net_rate":15687,"stock_uom":"Nos","docstatus":1,"description":"125 LPD ETC SWHS","parent":"QTN/HAV/15-16/00004","base_rate":15687,"item_code":"0500125","projected_qty":0,"doctype":"Quotation Item","price_list_rate":15687,"name":"QUOD/00007","idx":1,"item_group":"ETC Water Heater Systems","modified":"2016-04-05 11:13:55.806146","parenttype":"Quotation","net_amount":15687,"parentfield":"items"}],"discount_amount":0,"base_net_total":15687,"name":"QTN/HAV/15-16/00004","idx":0,"rounded_total":16550,"price_list_currency":"INR","modified":"2016-04-05 11:13:55.806146","taxes":[{"creation":"2016-04-05 11:13:51.498315","doctype":"Sales Taxes and Charges","included_in_print_rate":0,"rate":5.5,"tax_amount_after_discount_amount":862.79,"cost_center":"Haveri Branch - SELCO","total":16549.79,"charge_type":"On Net Total","modified_by":"haveri@selco-india.com","item_wise_tax_detail":"{\\"0500125\\":[5.5,862.79]}","base_total":16549.79,"owner":"haveri@selco-india.com","docstatus":1,"description":"Output VAT 5.5%","parent":"QTN/HAV/15-16/00004","base_tax_amount_after_discount_amount":862.79,"base_tax_amount":862.79,"account_head":"5.5% Output VAT Karnataka - SELCO","tax_amount":862.79,"name":"INVTD000008","idx":1,"modified":"2016-04-05 11:13:55.806146","parenttype":"Quotation","parentfield":"taxes"}],"plc_conversion_rate":1,"net_total":15687,"status":"Submitted","source":"","apply_discount_on":"Grand Total","in_words":"INR Sixteen Thousand, Five Hundred And Fifty only.","sales_person":"Sales Team","base_grand_total":16549.79,"__last_sync_on":"2016-04-07T09:20:19.627Z"}',
+ 'no_letterhead': u'0',
+ 'print_format': u'Quotation - Udupi'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/templates/pages/print.py", line 142, in get_html_and_style
+    no_letterhead=no_letterhead, trigger_print=trigger_print),
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/templates/pages/print.py", line 121, in get_html
+    html = template.render(args, filters={"len": len})
+  File "/home/basawaraj/frappe-bench/env/local/lib/python2.7/site-packages/jinja2/environment.py", line 989, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/basawaraj/frappe-bench/env/local/lib/python2.7/site-packages/jinja2/environment.py", line 754, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/./templates/print_formats/standard.html", line 28, in top-level template code
+    {{ render_field(df, doc) }}
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/./templates/print_formats/standard_macros.html", line 5, in template
+    <div>{{ frappe.render_template(df.options, {"doc": doc}) or "" }}</div>
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/utils/jinja.py", line 50, in render_template
+    return get_jenv().from_string(template).render(context)
+  File "/home/basawaraj/frappe-bench/env/local/lib/python2.7/site-packages/jinja2/environment.py", line 989, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/basawaraj/frappe-bench/env/local/lib/python2.7/site-packages/jinja2/environment.py", line 754, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "<template>", line 1, in top-level template code
+  File "/home/basawaraj/frappe-bench/env/local/lib/python2.7/site-packages/jinja2/environment.py", line 408, in getattr
+    return getattr(obj, attribute)
+ UndefinedError: 'cur_frm' is undefined
+
+--------------
+
+2016-04-07 14:50:00,265 New Exception collected with id: 2016-04-07 14:50:00.238402-106.51.227.205-9b3 
+ site: site1.local
+ form: {'cmd': u'frappe.templates.pages.print.get_html_and_style',
+ 'doc': u'{"additional_discount_percentage":0,"base_in_words":"INR Sixteen Thousand, Five Hundred And Fifty only.","naming_series":"QTN/HAV/15-16/","creation":"2016-04-05 11:13:51.498315","doctype":"Quotation","currency":"INR","conversion_rate":1,"owner":"haveri@selco-india.com","total":15687,"customer_name":"Nikhil","taxes_and_charges":"Output VAT 5.5% Karnataka","modified_by":"haveri@selco-india.com","order_type":"Sales","lead":"LEAD/HAV/00005","title":"Nikhil","base_total":15687,"selling_price_list":"Branch Sales","transaction_date":"2016-04-05","contact_display":"Nikhil","branch":"Haveri","docstatus":1,"company":"SELCO Solar Light Private Limited","ignore_pricing_rule":0,"base_rounded_total":16550,"quotation_to":"Lead","total_taxes_and_charges":862.79,"grand_total":16549.79,"base_discount_amount":0,"base_total_taxes_and_charges":862.79,"items":[{"base_price_list_rate":15687,"image":"","creation":"2016-04-05 11:13:51.498315","base_amount":15687,"qty":1,"item_tax_rate":"{}","rate":15687,"owner":"haveri@selco-india.com","actual_qty":0,"base_net_amount":15687,"page_break":0,"modified_by":"haveri@selco-india.com","base_net_rate":15687,"discount_percentage":0,"item_name":"125 LPD ETC SWHS","amount":15687,"net_rate":15687,"stock_uom":"Nos","docstatus":1,"description":"125 LPD ETC SWHS","parent":"QTN/HAV/15-16/00004","base_rate":15687,"item_code":"0500125","projected_qty":0,"doctype":"Quotation Item","price_list_rate":15687,"name":"QUOD/00007","idx":1,"item_group":"ETC Water Heater Systems","modified":"2016-04-05 11:13:55.806146","parenttype":"Quotation","net_amount":15687,"parentfield":"items"}],"discount_amount":0,"base_net_total":15687,"name":"QTN/HAV/15-16/00004","idx":0,"rounded_total":16550,"price_list_currency":"INR","modified":"2016-04-05 11:13:55.806146","taxes":[{"creation":"2016-04-05 11:13:51.498315","doctype":"Sales Taxes and Charges","included_in_print_rate":0,"rate":5.5,"tax_amount_after_discount_amount":862.79,"cost_center":"Haveri Branch - SELCO","total":16549.79,"charge_type":"On Net Total","modified_by":"haveri@selco-india.com","item_wise_tax_detail":"{\\"0500125\\":[5.5,862.79]}","base_total":16549.79,"owner":"haveri@selco-india.com","docstatus":1,"description":"Output VAT 5.5%","parent":"QTN/HAV/15-16/00004","base_tax_amount_after_discount_amount":862.79,"base_tax_amount":862.79,"account_head":"5.5% Output VAT Karnataka - SELCO","tax_amount":862.79,"name":"INVTD000008","idx":1,"modified":"2016-04-05 11:13:55.806146","parenttype":"Quotation","parentfield":"taxes"}],"plc_conversion_rate":1,"net_total":15687,"status":"Submitted","source":"","apply_discount_on":"Grand Total","in_words":"INR Sixteen Thousand, Five Hundred And Fifty only.","sales_person":"Sales Team","base_grand_total":16549.79,"__last_sync_on":"2016-04-07T09:20:19.627Z"}',
+ 'no_letterhead': u'0',
+ 'print_format': u'Quotation - Udupi'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/templates/pages/print.py", line 142, in get_html_and_style
+    no_letterhead=no_letterhead, trigger_print=trigger_print),
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/templates/pages/print.py", line 121, in get_html
+    html = template.render(args, filters={"len": len})
+  File "/home/basawaraj/frappe-bench/env/local/lib/python2.7/site-packages/jinja2/environment.py", line 989, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/basawaraj/frappe-bench/env/local/lib/python2.7/site-packages/jinja2/environment.py", line 754, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/./templates/print_formats/standard.html", line 28, in top-level template code
+    {{ render_field(df, doc) }}
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/./templates/print_formats/standard_macros.html", line 5, in template
+    <div>{{ frappe.render_template(df.options, {"doc": doc}) or "" }}</div>
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/utils/jinja.py", line 50, in render_template
+    return get_jenv().from_string(template).render(context)
+  File "/home/basawaraj/frappe-bench/env/local/lib/python2.7/site-packages/jinja2/environment.py", line 989, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/basawaraj/frappe-bench/env/local/lib/python2.7/site-packages/jinja2/environment.py", line 754, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "<template>", line 1, in top-level template code
+  File "/home/basawaraj/frappe-bench/env/local/lib/python2.7/site-packages/jinja2/environment.py", line 408, in getattr
+    return getattr(obj, attribute)
+ UndefinedError: 'cur_frm' is undefined
+
+--------------
+
+2016-04-08 09:08:27,189 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-09 04:00:31,956 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-09 06:35:06,891 Request Error 
+ site: site1.local
+ form: {'key': u'wm9mF7hMXUXwapu4iltbOEWjKqM4JatzLlGiO9OUnPTcnailBTBLSyiXC6uO3bHo'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-10 03:17:31,539 Request Error 
+ site: site1.local
+ form: {'testPost': u'true'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-10 07:26:09,605 Request Error 
+ site: site1.local
+ form: {'testPost': u'true'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+[2016-04-11 07:15:35 +0000] [20645] [INFO] Handling signal: term
+[2016-04-11 07:15:36 +0000] [20645] [INFO] Shutting down: Master
+[2016-04-11 07:15:39 +0000] [19701] [INFO] Starting gunicorn 19.4.5
+[2016-04-11 07:15:39 +0000] [19701] [INFO] Listening at: http://127.0.0.1:8000 (19701)
+[2016-04-11 07:15:39 +0000] [19701] [INFO] Using worker: sync
+[2016-04-11 07:15:39 +0000] [19707] [INFO] Booting worker with pid: 19707
+[2016-04-11 07:15:39 +0000] [19708] [INFO] Booting worker with pid: 19708
+
+2016-04-11 07:16:14,172 Request Error 
+ site: site1.local
+ form: {'cmd': u'erpnext.stock.doctype.delivery_note.delivery_note.make_sales_invoice',
+ 'source_name': u'DC/HAV/15-16/00003'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/stock/doctype/delivery_note/delivery_note.py", line 350, in make_sales_invoice
+    target_doc.naming_series = local_si_naming_series
+ AttributeError: 'NoneType' object has no attribute 'naming_series'
+
+--------------
+
+2016-04-11 07:16:14,222 New Exception collected with id: 2016-04-11 07:16:14.173518-106.51.22.81-b5b 
+ site: site1.local
+ form: {'cmd': u'erpnext.stock.doctype.delivery_note.delivery_note.make_sales_invoice',
+ 'source_name': u'DC/HAV/15-16/00003'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/stock/doctype/delivery_note/delivery_note.py", line 350, in make_sales_invoice
+    target_doc.naming_series = local_si_naming_series
+ AttributeError: 'NoneType' object has no attribute 'naming_series'
+
+--------------
+[2016-04-11 07:26:13 +0000] [19701] [INFO] Handling signal: term
+[2016-04-11 07:26:13 +0000] [19701] [INFO] Shutting down: Master
+[2016-04-11 07:26:17 +0000] [20017] [INFO] Starting gunicorn 19.4.5
+[2016-04-11 07:26:17 +0000] [20017] [INFO] Listening at: http://127.0.0.1:8000 (20017)
+[2016-04-11 07:26:17 +0000] [20017] [INFO] Using worker: sync
+[2016-04-11 07:26:17 +0000] [20023] [INFO] Booting worker with pid: 20023
+[2016-04-11 07:26:17 +0000] [20026] [INFO] Booting worker with pid: 20026
+[2016-04-11 07:33:49 +0000] [20017] [INFO] Handling signal: term
+[2016-04-11 07:33:50 +0000] [20017] [INFO] Shutting down: Master
+[2016-04-11 07:33:54 +0000] [20276] [INFO] Starting gunicorn 19.4.5
+[2016-04-11 07:33:54 +0000] [20276] [INFO] Listening at: http://127.0.0.1:8000 (20276)
+[2016-04-11 07:33:54 +0000] [20276] [INFO] Using worker: sync
+[2016-04-11 07:33:54 +0000] [20281] [INFO] Booting worker with pid: 20281
+[2016-04-11 07:33:54 +0000] [20282] [INFO] Booting worker with pid: 20282
+[2016-04-11 07:37:23 +0000] [20276] [INFO] Handling signal: term
+[2016-04-11 07:37:24 +0000] [20276] [INFO] Shutting down: Master
+[2016-04-11 07:37:27 +0000] [20363] [INFO] Starting gunicorn 19.4.5
+[2016-04-11 07:37:27 +0000] [20363] [INFO] Listening at: http://127.0.0.1:8000 (20363)
+[2016-04-11 07:37:27 +0000] [20363] [INFO] Using worker: sync
+[2016-04-11 07:37:27 +0000] [20369] [INFO] Booting worker with pid: 20369
+[2016-04-11 07:37:27 +0000] [20372] [INFO] Booting worker with pid: 20372
+[2016-04-11 07:41:53 +0000] [20363] [INFO] Handling signal: term
+[2016-04-11 07:41:54 +0000] [20363] [INFO] Shutting down: Master
+[2016-04-11 07:41:57 +0000] [20542] [INFO] Starting gunicorn 19.4.5
+[2016-04-11 07:41:57 +0000] [20542] [INFO] Listening at: http://127.0.0.1:8000 (20542)
+[2016-04-11 07:41:57 +0000] [20542] [INFO] Using worker: sync
+[2016-04-11 07:41:57 +0000] [20548] [INFO] Booting worker with pid: 20548
+[2016-04-11 07:41:57 +0000] [20549] [INFO] Booting worker with pid: 20549
+[2016-04-11 07:48:40 +0000] [20542] [INFO] Handling signal: term
+[2016-04-11 07:48:41 +0000] [20542] [INFO] Shutting down: Master
+[2016-04-11 07:48:44 +0000] [20699] [INFO] Starting gunicorn 19.4.5
+[2016-04-11 07:48:44 +0000] [20699] [INFO] Listening at: http://127.0.0.1:8000 (20699)
+[2016-04-11 07:48:44 +0000] [20699] [INFO] Using worker: sync
+[2016-04-11 07:48:44 +0000] [20705] [INFO] Booting worker with pid: 20705
+[2016-04-11 07:48:44 +0000] [20708] [INFO] Booting worker with pid: 20708
+
+2016-04-11 07:49:00,901 Request Error 
+ site: site1.local
+ form: {'cmd': u'erpnext.stock.doctype.delivery_note.delivery_note.make_sales_invoice',
+ 'source_name': u'DC/HAV/15-16/00003'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/stock/doctype/delivery_note/delivery_note.py", line 365, in make_sales_invoice
+    target_doc.naming_series = local_si_naming_series
+ AttributeError: 'NoneType' object has no attribute 'naming_series'
+
+--------------
+
+2016-04-11 07:49:00,951 New Exception collected with id: 2016-04-11 07:49:00.902838-106.51.22.81-3a7 
+ site: site1.local
+ form: {'cmd': u'erpnext.stock.doctype.delivery_note.delivery_note.make_sales_invoice',
+ 'source_name': u'DC/HAV/15-16/00003'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/stock/doctype/delivery_note/delivery_note.py", line 365, in make_sales_invoice
+    target_doc.naming_series = local_si_naming_series
+ AttributeError: 'NoneType' object has no attribute 'naming_series'
+
+--------------
+[2016-04-11 07:50:30 +0000] [20699] [INFO] Handling signal: term
+[2016-04-11 07:50:30 +0000] [20699] [INFO] Shutting down: Master
+[2016-04-11 07:50:35 +0000] [20781] [INFO] Starting gunicorn 19.4.5
+[2016-04-11 07:50:35 +0000] [20781] [INFO] Listening at: http://127.0.0.1:8000 (20781)
+[2016-04-11 07:50:35 +0000] [20781] [INFO] Using worker: sync
+[2016-04-11 07:50:35 +0000] [20790] [INFO] Booting worker with pid: 20790
+[2016-04-11 07:50:35 +0000] [20791] [INFO] Booting worker with pid: 20791
+
+2016-04-11 07:50:49,328 Request Error 
+ site: site1.local
+ form: {'cmd': u'erpnext.stock.doctype.delivery_note.delivery_note.make_sales_invoice',
+ 'source_name': u'DC/HAV/15-16/00003'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/stock/doctype/delivery_note/delivery_note.py", line 399, in make_sales_invoice
+    target_doc.naming_series = local_si_naming_series
+ AttributeError: 'NoneType' object has no attribute 'naming_series'
+
+--------------
+
+2016-04-11 07:50:49,380 New Exception collected with id: 2016-04-11 07:50:49.329773-106.51.22.81-dc0 
+ site: site1.local
+ form: {'cmd': u'erpnext.stock.doctype.delivery_note.delivery_note.make_sales_invoice',
+ 'source_name': u'DC/HAV/15-16/00003'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/erpnext/erpnext/stock/doctype/delivery_note/delivery_note.py", line 399, in make_sales_invoice
+    target_doc.naming_series = local_si_naming_series
+ AttributeError: 'NoneType' object has no attribute 'naming_series'
+
+--------------
+[2016-04-11 07:51:25 +0000] [20781] [INFO] Handling signal: term
+[2016-04-11 07:51:25 +0000] [20781] [INFO] Shutting down: Master
+[2016-04-11 07:51:29 +0000] [20816] [INFO] Starting gunicorn 19.4.5
+[2016-04-11 07:51:29 +0000] [20816] [INFO] Listening at: http://127.0.0.1:8000 (20816)
+[2016-04-11 07:51:29 +0000] [20816] [INFO] Using worker: sync
+[2016-04-11 07:51:29 +0000] [20825] [INFO] Booting worker with pid: 20825
+[2016-04-11 07:51:29 +0000] [20826] [INFO] Booting worker with pid: 20826
+
+2016-04-12 07:52:14,015 Request Error 
+ site: site1.local
+ form: {'cmd': u'frappe.desk.form.utils.validate_link',
+ 'fetch': u'branch_income_account',
+ 'options': u'Branch',
+ 'value': u'Kushalnagar'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 57, in application
+    response = frappe.handler.handle()
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 19, in handle
+    execute_cmd(cmd)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/handler.py", line 36, in execute_cmd
+    ret = frappe.call(method, **frappe.form_dict)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/__init__.py", line 805, in call
+    return fn(*args, **newargs)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/desk/form/utils.py", line 44, in validate_link
+    % (fetch, frappe.db.escape(options), '%s'), (value,))[0]]
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/database.py", line 136, in sql
+    self._cursor.execute(query, values)
+  File "/home/basawaraj/frappe-bench/env/local/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/basawaraj/frappe-bench/env/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ OperationalError: (1054, "Unknown column 'branch_income_account' in 'field list'")
+
+--------------
+
+2016-04-12 07:52:14,166 Could not take error snapshot: 'connection' 
+ site: site1.local
+ form: {'cmd': u'frappe.desk.form.utils.validate_link',
+ 'fetch': u'branch_income_account',
+ 'options': u'Branch',
+ 'value': u'Kushalnagar'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/utils/error.py", line 81, in get_snapshot
+    call = inspect.formatargvalues(args, varargs, varkw, locals, formatvalue=lambda value: '={}'.format(pydoc.text.repr(value)))
+  File "/usr/lib/python2.7/inspect.py", line 888, in formatargvalues
+    specs.append(strseq(args[i], convert, join))
+  File "/usr/lib/python2.7/inspect.py", line 843, in strseq
+    return convert(object)
+  File "/usr/lib/python2.7/inspect.py", line 885, in convert
+    return formatarg(name) + formatvalue(locals[name])
+ KeyError: 'connection'
+
+--------------
+
+2016-04-12 17:02:57,996 Request Error 
+ site: site1.local
+ form: {'testPost': u'true'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-12 21:09:46,006 Request Error 
+ site: site1.local
+ form: {'testPost': u'true'}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+[2016-04-13 15:10:38 +0000] [20816] [INFO] Handling signal: term
+[2016-04-13 15:10:39 +0000] [20816] [INFO] Shutting down: Master
+[2016-04-13 15:25:51 +0000] [1533] [INFO] Starting gunicorn 19.4.5
+[2016-04-13 15:25:51 +0000] [1533] [INFO] Listening at: http://127.0.0.1:8000 (1533)
+[2016-04-13 15:25:51 +0000] [1533] [INFO] Using worker: sync
+[2016-04-13 15:25:52 +0000] [1552] [INFO] Booting worker with pid: 1552
+[2016-04-13 15:25:52 +0000] [1553] [INFO] Booting worker with pid: 1553
+
+2016-04-14 12:16:21,861 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-14 12:16:21,881 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-14 12:16:21,977 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-14 12:16:22,003 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-14 12:16:22,014 Request Error 
+ site: site1.local
+ form: {'<methodCall> <methodName>system.listMethods</methodName> <params></params> </methodCall>': u''}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-14 12:16:22,019 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-14 12:16:22,049 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-14 12:16:22,122 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-14 12:16:22,130 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-14 12:16:22,153 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-14 12:16:22,265 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-14 12:16:22,361 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-14 12:16:22,459 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-14 12:16:22,459 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-14 12:16:22,588 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-14 12:16:22,590 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-14 12:16:22,705 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-14 12:16:22,785 Request Error 
+ site: site1.local
+ form: {}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-16 12:36:33,131 Request Error 
+ site: site1.local
+ form: {'redirect:${#res=#context.get(\'com.opensymphony.xwork2.dispatcher.HttpServletResponse\'),#res.setCharacterEncoding("UTF-8"),#req=#context.get(\'com.opensymphony.xwork2.dispatcher.HttpServletRequest\'),#res.getWriter().print("dir:"),#res.getWriter().println(#req.getSession().getServletContext().getRealPath("/")),#res.getWriter().flush(),#res.getWriter().close()}': u''}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-16 18:41:59,618 Request Error 
+ site: site1.local
+ form: {'redirect:${#res=#context.get(\'com.opensymphony.xwork2.dispatcher.HttpServletResponse\'),#res.setCharacterEncoding("UTF-8"),#req=#context.get(\'com.opensymphony.xwork2.dispatcher.HttpServletRequest\'),#res.getWriter().print("dir:"),#res.getWriter().println(#req.getSession().getServletContext().getRealPath("/")),#res.getWriter().flush(),#res.getWriter().close()}': u''}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-17 15:42:35,695 Request Error 
+ site: site1.local
+ form: {'redirect:${#res=#context.get(\'com.opensymphony.xwork2.dispatcher.HttpServletResponse\'),#res.setCharacterEncoding("UTF-8"),#req=#context.get(\'com.opensymphony.xwork2.dispatcher.HttpServletRequest\'),#res.getWriter().print("dir:"),#res.getWriter().println(#req.getSession().getServletContext().getRealPath("/")),#res.getWriter().flush(),#res.getWriter().close()}': u''}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+
+2016-04-17 17:43:07,032 Request Error 
+ site: site1.local
+ form: {'redirect:${#res=#context.get(\'com.opensymphony.xwork2.dispatcher.HttpServletResponse\'),#res.setCharacterEncoding("UTF-8"),#req=#context.get(\'com.opensymphony.xwork2.dispatcher.HttpServletRequest\'),#res.getWriter().print("dir:"),#res.getWriter().println(#req.getSession().getServletContext().getRealPath("/")),#res.getWriter().flush(),#res.getWriter().close()}': u''}
+
+Traceback (innermost last):
+  File "/home/basawaraj/frappe-bench/apps/frappe/frappe/app.py", line 72, in application
+    raise NotFound
+ NotFound: 404: Not Found
+
+--------------
+[2016-04-18 13:19:49 +0000] [1533] [INFO] Handling signal: term
+[2016-04-18 13:19:50 +0000] [1533] [INFO] Shutting down: Master
+[2016-04-18 13:25:39 +0000] [1616] [INFO] Starting gunicorn 19.4.5
+[2016-04-18 13:25:39 +0000] [1616] [INFO] Listening at: http://127.0.0.1:8000 (1616)
+[2016-04-18 13:25:39 +0000] [1616] [INFO] Using worker: sync
+[2016-04-18 13:25:39 +0000] [1631] [INFO] Booting worker with pid: 1631
+[2016-04-18 13:25:39 +0000] [1632] [INFO] Booting worker with pid: 1632
